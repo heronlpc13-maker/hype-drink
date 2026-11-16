@@ -49,6 +49,16 @@ footer{border-top:1px solid #353746;background:#0e111b;padding-top:64px}.footer-
 .nutrition-modal .modal-nutri-list strong{white-space:normal;text-align:right;line-height:1.45;max-width:53%}
 .modal-caution{background:#3b281f;color:#ffe5c7;border:1px solid #bb834e;border-radius:9px;padding:12px;font-size:12px;line-height:1.5}
 @media(max-width:550px){.nutrition-card{padding:23px 18px}.nutrition-modal{padding:28px 20px}.nutri-table{font-size:12px}}
+
+/* Valores estimados Hype Drink, base de 1.000 ml — 16/11/2026 */
+.nutri-highlight{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin:19px 0 22px}
+.nutri-highlight>div{border:1px solid #445359;background:linear-gradient(145deg,#1d2f35,#1c2431);border-radius:14px;padding:14px 12px;min-width:0}
+.nutri-highlight span{display:block;font-size:10px;color:#b5d3d4;letter-spacing:.2px;line-height:1.35;margin-bottom:10px}
+.nutri-highlight strong{display:block;font-size:24px;color:#ccff54;line-height:1.1;white-space:nowrap}
+.nutri-highlight small{font-size:12px;font-weight:700;color:#e2f4ef}
+.nutri-table td{font-variant-numeric:tabular-nums}
+.nutrition-card .formula-sources{overflow-wrap:anywhere}
+@media(max-width:560px){.nutri-highlight{grid-template-columns:1fr}.nutri-highlight>div{display:flex;align-items:center;justify-content:space-between;gap:8px}.nutri-highlight span{margin:0}.nutri-highlight strong{font-size:22px}}
 </style>
   <title>Hype Drink — A sua vibe tem sabor</title>
 </head>
@@ -94,7 +104,7 @@ footer{border-top:1px solid #353746;background:#0e111b;padding-top:64px}.footer-
         <div class="section-heading"><div><div class="eyebrow neon-pink">01 / ENCONTRE SEU FAVORITO</div><h2 id="catalogTitle">UM HYPE PARA <span class="accent-lime">CADA VIBE.</span></h2><p>Cada Hype Drink tem 1.000 ml. Escolha a apresentação, com ou sem gás, e adicione ao seu pedido.</p></div><div class="price-pill"><small>A PARTIR DE</small><strong>R$ 27<span>,00</span></strong><span>sem gás</span></div></div>
         <div class="catalog-topline"><div class="filters" id="filters" role="group" aria-label="Filtrar bebidas"><button class="filter active" data-filter="todos" aria-pressed="true">Todos</button><button class="filter" data-filter="dourado" aria-pressed="false">Dourado</button><button class="filter" data-filter="rose" aria-pressed="false">Rosé</button><button class="filter" data-filter="verde" aria-pressed="false">Verde</button></div><span class="catalog-caption">Gelo + atitude, sempre ✦</span></div>
         <div class="product-grid" id="productGrid" aria-live="polite"></div>
-        <p class="catalog-disclaimer"><span aria-hidden="true">ⓘ</span> Gold, Ruby e Green são apresentações visuais. A base informada contém Herbal Concentrate, N-R-G, CR7 Drive e Liftoff. Cada apresentação rende 1 copo de 1.000 ml. Confirme peso dos dosadores, sabores, alergênicos e disponibilidade pelo WhatsApp.</p>
+        <p class="catalog-disclaimer"><span aria-hidden="true">ⓘ</span> Gold, Ruby e Green são apresentações visuais. A base informada contém Herbal Concentrate, N-R-G, CR7 Drive e Liftoff. Cada apresentação rende 1 copo de 1.000 ml. A base informada tem aproximadamente 45 kcal e 12,5 g de carboidratos nas medidas de referência, sem adicionais calóricos. Confirme peso dos dosadores, sabores, alergênicos e disponibilidade pelo WhatsApp.</p>
       </div>
     </section>
 
@@ -107,42 +117,51 @@ footer{border-top:1px solid #353746;background:#0e111b;padding-top:64px}.footer-
     <section class="nutrition section-gap" id="nutricao" aria-labelledby="nutritionTitle">
 <div class="container nutrition-wrap">
   <div class="nutrition-left">
-    <div class="eyebrow neon-lime">04 / INGREDIENTES E CONSUMO CONSCIENTE</div>
-    <h2 id="nutritionTitle">SEU HYPE.<br><span class="accent-cyan">SUA ESCOLHA.</span></h2>
-    <p>A receita completa rende <strong>1 Hype Drink em copo de 1.000 ml</strong>, conforme confirmado pela equipe. Veja os ingredientes informados e os valores que ainda dependem do peso real dos dosadores.</p>
-    <ul class="formula-list">
-      <li><strong>01 · Herbal Concentrate</strong>1 medida por preparo. Contém chá verde, chá preto e cafeína. A receita Herbalife de referência usa 1,7 g.</li>
-      <li><strong>02 · N-R-G</strong>1 medida por preparo. À base de chá preto e guaraná. A receita Herbalife de referência usa 1 g.</li>
-      <li><strong>03 · CR7 Drive</strong>½ medida por preparo. Fornece carboidratos e eletrólitos. Se o dosador for de 13,5 g, meia medida equivale a cerca de 6,75 g.</li>
-      <li><strong>04 · Liftoff</strong>1 unidade no preparo (5 g, se for o sachê brasileiro de referência). Contém cafeína, taurina e vitaminas.</li>
-    </ul>
-    <p class="formula-benefits">Os ingredientes contêm cafeína, que pode aumentar temporariamente o estado de alerta; o CR7 Drive fornece carboidratos e eletrólitos, e o Liftoff contém vitaminas. Não são promessas de resultados individuais nem alegações de tratamento.</p>
-    <div class="formula-caution" role="note"><strong>⚠ ATENÇÃO: POSSÍVEL TEOR ELEVADO DE CAFEÍNA</strong>
-      Usando 1,7 g de Herbal Concentrate, 1 g de N-R-G e 1 sachê de 5 g de Liftoff, o <b>copo inteiro de 1.000 ml pode conter aproximadamente 210 mg de cafeína</b>. É uma <b>estimativa condicionada</b> ao peso das medidas e aos rótulos, não uma análise do Hype Drink servido. Pessoas sensíveis à cafeína ou com condições clínicas devem procurar orientação profissional.
+    <div class="eyebrow neon-lime">04 / COMPOSIÇÃO E NUTRIÇÃO</div>
+    <h2 id="nutritionTitle">SAIBA O QUE VAI<br><span class="accent-cyan">NO SEU HYPE.</span></h2>
+    <p>Uma receita completa rende <strong>1 Hype Drink de 1.000 ml</strong>. Os valores abaixo são <strong>estimativas</strong>, calculadas a partir das porções de referência publicadas pela Herbalife Brasil.</p>
+    <div class="nutri-highlight" aria-label="Resumo nutricional aproximado por copo">
+      <div><span>Energia estimada</span><strong>≈ 45 <small>kcal</small></strong></div>
+      <div><span>Carboidratos estimados</span><strong>≈ 12,5 <small>g</small></strong></div>
+      <div><span>Cafeína estimada</span><strong>≈ 210 <small>mg</small></strong></div>
     </div>
-    <p class="formula-reference"><b>Porção: 1 copo de 1.000 ml, preparado com a receita completa.</b> A adição de água, gelo ou gás não reduz o total de cafeína consumida ao ingerir o copo inteiro. Confirme também alergênicos e outras fontes de cafeína da sua rotina.</p>
-    <a class="button button-lime" href="https://wa.me/5521992764362?text=Ol%C3%A1%21%20Pode%20confirmar%20o%20peso%20dos%20dosadores%20e%20a%20cafe%C3%ADna%20do%20Hype%20Drink%20de%201000%20ml%3F" target="_blank" rel="noopener noreferrer">Confirmar cafeína por copo <span aria-hidden="true">↗</span></a>
+    <ul class="formula-list">
+      <li><strong>01 · Herbal Concentrate</strong>1 medida adotada como 1,7 g · cerca de 5 kcal. Chá verde e chá preto, com cafeína.</li>
+      <li><strong>02 · N-R-G</strong>1 medida adotada como 1 g · 0 kcal conforme arredondamento da informação brasileira. Chá preto e guaraná.</li>
+      <li><strong>03 · CR7 Drive</strong>½ colher medida adotada como 6,75 g · cerca de 25 kcal e 6,5 g de carboidratos. A porção padrão de 27 g equivale a 2 colheres de 13,5 g.</li>
+      <li><strong>04 · Liftoff</strong>1 sachê de 5 g · cerca de 15 kcal. Suplemento com cafeína, taurina e vitaminas.</li>
+    </ul>
+    <p class="formula-benefits">A fórmula reúne cafeína, carboidratos, eletrólitos e vitaminas. A cafeína pode aumentar temporariamente o estado de alerta. Esses dados não representam promessa de resultado individual nem benefício terapêutico.</p>
+    <div class="formula-caution" role="note"><strong>⚠ CONSUMO CONSCIENTE: CONTÉM CAFEÍNA</strong>
+      A mistura inteira de 1.000 ml pode conter <b>aproximadamente 210 mg de cafeína</b> nas quantidades de referência. A quantidade real depende do peso dos dosadores, das versões dos produtos e de eventuais ingredientes adicionais. Pessoas sensíveis à cafeína ou com condições clínicas devem buscar orientação profissional.
+    </div>
+    <p class="formula-reference">A água, o gelo e a água com gás, sem adição de açúcar, não alteram as calorias dos ingredientes. Xaropes, frutas, sucos e outros adicionais podem alterar significativamente o valor nutricional final. Os pesos declarados em «medidas» precisam ser confirmados em balança.</p>
+    <a class="button button-lime" href="https://wa.me/5521992764362?text=Ol%C3%A1%21%20Gostaria%20de%20confirmar%20os%20ingredientes%20e%20os%20valores%20nutricionais%20do%20Hype%20Drink%20de%201.000%20ml." target="_blank" rel="noopener noreferrer">Tirar dúvidas no WhatsApp <span aria-hidden="true">↗</span></a>
   </div>
   <div class="nutrition-card">
-    <div class="nutrition-header"><strong>1 COPO DE 1.000 ML</strong><span>BASE INFORMADA</span></div>
-    <p class="nutri-sub">Receita completa para um copo de 1.000 ml · confirmar os pesos dos ingredientes</p>
+    <div class="nutrition-header"><strong>1 COPO DE 1.000 ML</strong><span>ESTIMATIVA</span></div>
+    <p class="nutri-sub">Base de 14,45 g de pós · referências da Herbalife Brasil</p>
     <table class="nutri-table"><tbody>
-      <tr><th scope="row">Herbal Concentrate</th><td>1 medida</td></tr>
-      <tr><th scope="row">N-R-G</th><td>1 medida</td></tr>
-      <tr><th scope="row">CR7 Drive</th><td>½ medida</td></tr>
-      <tr><th scope="row">Liftoff</th><td>1 unidade</td></tr>
-      <tr><th scope="row">Cafeína estimada no copo de 1.000 ml*</th><td class="nutri-emphasis">≈ 210 mg*</td></tr>
-      <tr><th scope="row">Calorias por copo</th><td>A calcular</td></tr>
-      <tr><th scope="row">Carboidratos / açúcares</th><td>A calcular</td></tr>
-      <tr><th scope="row">Sódio / vitaminas</th><td>A calcular</td></tr>
-      <tr><th scope="row">Alergênicos e outros ingredientes</th><td>Ver rótulos</td></tr>
+      <tr><th scope="row">Herbal Concentrate</th><td>1,7 g · 5 kcal</td></tr>
+      <tr><th scope="row">N-R-G</th><td>1 g · 0 kcal*</td></tr>
+      <tr><th scope="row">CR7 Drive</th><td>6,75 g · 25 kcal</td></tr>
+      <tr><th scope="row">Liftoff</th><td>5 g · 15 kcal</td></tr>
+      <tr><th scope="row">Total de ingredientes em pó</th><td>14,45 g</td></tr>
+      <tr><th scope="row">Valor energético / copo</th><td class="nutri-emphasis">≈ 45 kcal</td></tr>
+      <tr><th scope="row">Carboidratos / copo</th><td class="nutri-emphasis">≈ 12,5 g</td></tr>
+      <tr><th scope="row">Cafeína / copo</th><td class="nutri-emphasis">≈ 210 mg</td></tr>
+      <tr><th scope="row">Açúcares — apenas CR7 Drive</th><td>≈ 4,75 g**</td></tr>
+      <tr><th scope="row">Sódio — apenas CR7 Drive</th><td>≈ 55 mg**</td></tr>
+      <tr><th scope="row">Valor energético / 100 ml</th><td>≈ 4,5 kcal</td></tr>
+      <tr><th scope="row">Carboidratos / 100 ml</th><td>≈ 1,25 g</td></tr>
+      <tr><th scope="row">Açúcares e sódio totais, alergênicos</th><td>Conferir rótulos</td></tr>
     </tbody></table>
-    <div class="nutrition-bottom"><span aria-hidden="true">ⓘ</span><span>* Estimativa caso os dosadores equivalham a 1,7 g de Herbal Concentrate e 1 g de N-R-G, e haja 1 sachê de Liftoff de 5 g. O Hype Drink informado rende 1 copo de 1.000 ml. A receita Herbalife usada como referência tem outro rendimento; esta estimativa não substitui o cálculo da receita real nem um rótulo nutricional final.</span></div>
-    <p class="formula-sources">Fontes: <a href="https://www.receitasherbalife.com.br/bebida-funcional-para-energia-e-disposicao" target="_blank" rel="noopener noreferrer">receita Herbalife</a> · <a href="https://receitasherbalife.com.br/fresh-turbo" target="_blank" rel="noopener noreferrer">Liftoff</a> · <a href="https://www.herbalife.com/pt-br/recursos-de-bem-estar/artigos/the-relationship-between-hydration-and-physical-exercise" target="_blank" rel="noopener noreferrer">CR7 Drive</a> · <a href="https://www.efsa.europa.eu/en/topics/topic/caffeine" target="_blank" rel="noopener noreferrer">EFSA</a> · <a href="https://www.gov.br/anvisa/pt-br/assuntos/alimentos/suplementos-alimentares/perguntas-frequentes" target="_blank" rel="noopener noreferrer">Anvisa</a>. Consulta: 16/11/2026.</p>
+    <div class="nutrition-bottom"><span aria-hidden="true">ⓘ</span><span>* N-R-G anunciado como 0 kcal na referência brasileira, por arredondamento. ** Valores atribuídos somente à porção de CR7 Drive, não ao drink inteiro. Carboidratos estimados por ajuste proporcional da receita Herbalife com 27 g de CR7 Drive (32 g de carboidratos no preparo) para 6,75 g de CR7 (−19,5 g): ≈ 12,5 g. As calorias foram somadas usando os valores arredondados por produto. Não é uma tabela nutricional laboratorial definitiva.</span></div>
+    <p class="formula-sources">Fontes Herbalife: <a href="https://assets.herbalifenutrition.com/content/dam/regional/brazil/pt_br/consumable_content/marketing_materials/guides/2023/08-Aug/Guia_Estrategico_EVS_Universidade_Modulo3.pdf" target="_blank" rel="noopener noreferrer">guia brasileiro (valores por porção)</a> · <a href="https://www.receitasherbalife.com.br/bebida-funcional-para-energia-e-disposicao" target="_blank" rel="noopener noreferrer">receita oficial de referência</a> · <a href="https://assets.herbalifenutrition.com/content/dam/regional/brazil/pt_br/consumable_content/marketing_materials/recipe/2023/08-Aug/Carta_Drinks_EVS.pdf" target="_blank" rel="noopener noreferrer">gramatura do CR7 Drive</a> · <a href="https://www.herbalife.com/pt-br/recursos-de-bem-estar/artigos/the-relationship-between-hydration-and-physical-exercise" target="_blank" rel="noopener noreferrer">CR7 Drive</a>. Fórmula calculada em 16/11/2026; confirme as embalagens em uso.</p>
   </div>
 </div></section>
 
-    <section class="faq section-gap" id="duvidas" aria-labelledby="faqTitle"><div class="container faq-grid"><div><div class="eyebrow neon-pink">05 / SEM COMPLICAÇÃO</div><h2 id="faqTitle">DÚVIDAS?<br><span class="accent-lime">A GENTE RESPONDE.</span></h2><p>Escolha com tranquilidade e fale diretamente com a nossa equipe.</p><a class="inline-link" href="https://wa.me/5521992764362?text=Ol%C3%A1%21%20Tenho%20uma%20d%C3%BAvida%20sobre%20o%20Hype%20Drink." target="_blank" rel="noopener noreferrer">Conversar no WhatsApp <span aria-hidden="true">↗</span></a></div><div class="faq-items"><details><summary>Quanto custa o Hype Drink? <span>+</span></summary><p>A referência de preço é R$ 27,00 sem gás e R$ 30,00 com gás por unidade. Consulte disponibilidade, condições e eventuais taxas no atendimento.</p></details><details><summary>Posso escolher com ou sem gás? <span>+</span></summary><p>Sim. Você escolhe uma das duas opções ao adicionar cada drink ao carrinho.</p></details><details><summary>Tem cafeína? Quais são os ingredientes? <span>+</span></summary><p>Cada Hype Drink de 1.000 ml contém 1 medida de Herbal Concentrate, 1 de N-R-G, ½ de CR7 Drive e 1 Liftoff. O copo inteiro pode conter aproximadamente 210 mg de cafeína, se os dosadores tiverem os pesos de referência. Confirme os pesos e os rótulos para obter o valor definitivo.</p></details><details><summary>Como faço o pedido? <span>+</span></summary><p>Escolha os itens no cardápio, ajuste as quantidades e clique em “Finalizar pelo WhatsApp”. Seu pedido será preparado como mensagem para confirmar com a equipe.</p></details><details><summary>Vocês fazem entregas? <span>+</span></summary><p>Consulte pelo WhatsApp a disponibilidade de entregas ou retirada, os locais atendidos e possíveis taxas.</p></details></div></div></section>
+    <section class="faq section-gap" id="duvidas" aria-labelledby="faqTitle"><div class="container faq-grid"><div><div class="eyebrow neon-pink">05 / SEM COMPLICAÇÃO</div><h2 id="faqTitle">DÚVIDAS?<br><span class="accent-lime">A GENTE RESPONDE.</span></h2><p>Escolha com tranquilidade e fale diretamente com a nossa equipe.</p><a class="inline-link" href="https://wa.me/5521992764362?text=Ol%C3%A1%21%20Tenho%20uma%20d%C3%BAvida%20sobre%20o%20Hype%20Drink." target="_blank" rel="noopener noreferrer">Conversar no WhatsApp <span aria-hidden="true">↗</span></a></div><div class="faq-items"><details><summary>Quanto custa o Hype Drink? <span>+</span></summary><p>A referência de preço é R$ 27,00 sem gás e R$ 30,00 com gás por unidade. Consulte disponibilidade, condições e eventuais taxas no atendimento.</p></details><details><summary>Posso escolher com ou sem gás? <span>+</span></summary><p>Sim. Você escolhe uma das duas opções ao adicionar cada drink ao carrinho.</p></details><details><summary>Tem cafeína? Quais são os ingredientes? <span>+</span></summary><p>Cada Hype Drink de 1.000 ml leva 1 medida de Herbal Concentrate, 1 de N-R-G, ½ medida de CR7 Drive e 1 Liftoff. Usando gramaturas de referência (1,7 g, 1 g, 6,75 g e 5 g), estimamos cerca de 45 kcal, 12,5 g de carboidratos e 210 mg de cafeína por copo. Os valores finais dependem dos dosadores e eventuais adicionais.</p></details><details><summary>Como faço o pedido? <span>+</span></summary><p>Escolha os itens no cardápio, ajuste as quantidades e clique em “Finalizar pelo WhatsApp”. Seu pedido será preparado como mensagem para confirmar com a equipe.</p></details><details><summary>Vocês fazem entregas? <span>+</span></summary><p>Consulte pelo WhatsApp a disponibilidade de entregas ou retirada, os locais atendidos e possíveis taxas.</p></details></div></div></section>
 
     <section class="bottom-cta"><div class="container"><div class="cta-panel"><div class="cta-orb" aria-hidden="true"></div><div class="eyebrow">PRONTO PARA SUA PRÓXIMA PAUSA?</div><h2>ESCOLHA A COR.<br>ENTRE NA <em>VIBE.</em></h2><p>Seu próximo Hype está a poucos cliques de distância.</p><a href="#cardapio" class="button button-dark">Montar meu pedido <span aria-hidden="true">↗</span></a><div class="cta-outline" aria-hidden="true">HYPE!</div></div></div></section>
   </main>
@@ -154,7 +173,16 @@ footer{border-top:1px solid #353746;background:#0e111b;padding-top:64px}.footer-
   <div class="drawer-backdrop" id="drawerBackdrop" hidden></div>
   <aside class="cart-drawer" id="cartDrawer" aria-label="Carrinho de pedidos" aria-modal="true" role="dialog" aria-hidden="true" tabindex="-1"><div class="drawer-head"><div><span class="eyebrow neon-pink">SEU PEDIDO</span><h2>MEU CARRINHO <span id="drawerCount">(0)</span></h2></div><button type="button" class="icon-button" id="closeCart" aria-label="Fechar carrinho">✕</button></div><div id="cartItems" class="cart-items"></div><div class="drawer-bottom"><label class="input-label" for="customerName">Seu nome <span>(opcional)</span></label><input id="customerName" placeholder="Como podemos chamar você?" maxlength="80" autocomplete="name"><label class="input-label" for="orderNotes">Observações <span>(opcional)</span></label><textarea id="orderNotes" rows="2" maxlength="350" placeholder="Ex.: bairro, preferências e dúvidas"></textarea><div class="total-row"><span>Total dos itens</span><strong id="cartTotal">R$ 0,00</strong></div><small class="total-detail">O pedido não é confirmado automaticamente. Disponibilidade, entrega e possíveis taxas são combinadas pelo WhatsApp.</small><button id="checkout" type="button" class="button button-lime checkout-button" disabled>Finalizar pelo WhatsApp <span>↗</span></button></div></aside>
 
-  <div class="modal-backdrop" id="nutritionBackdrop" hidden></div><div class="nutrition-modal" id="nutritionModal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modalTitle" tabindex="-1"><button type="button" id="closeNutrition" class="icon-button modal-close" aria-label="Fechar informações">✕</button><div class="eyebrow neon-cyan">BASE DO HYPE DRINK</div><h2 id="modalTitle">HYPE DRINK</h2><p class="modal-info">Receita completa para um único copo de 1.000 ml; os pesos dos dosadores precisam ser confirmados.</p><div class="modal-nutri-list"><div><span>Herbal Concentrate</span><strong>1 medida</strong></div><div><span>N-R-G</span><strong>1 medida</strong></div><div><span>CR7 Drive</span><strong>½ medida</strong></div><div><span>Liftoff</span><strong>1 unidade</strong></div><div><span>Cafeína no copo de 1.000 ml (estimativa)</span><strong>≈ 210 mg*</strong></div><div><span>Calorias, açúcar, sódio, alergênicos</span><strong>A confirmar com as quantidades reais</strong></div></div><p class="modal-caution">⚠ *O copo inteiro de 1.000 ml reúne toda a receita. A estimativa de 210 mg depende de 1,7 g de Herbal Concentrate, 1 g de N-R-G e 1 sachê de Liftoff de 5 g.</p><a id="modalAskLink" class="button button-lime" href="https://wa.me/5521992764362" target="_blank" rel="noopener noreferrer">Confirmar por WhatsApp <span>↗</span></a></div>
+  <div class="modal-backdrop" id="nutritionBackdrop" hidden></div><div class="nutrition-modal" id="nutritionModal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modalTitle" tabindex="-1"><button type="button" id="closeNutrition" class="icon-button modal-close" aria-label="Fechar informações">✕</button><div class="eyebrow neon-cyan">BASE DO HYPE DRINK</div><h2 id="modalTitle">HYPE DRINK</h2><p class="modal-info">Receita completa para um único copo de 1.000 ml; os pesos dos dosadores precisam ser confirmados.</p><div class="modal-nutri-list">
+<div><span>Herbal Concentrate</span><strong>1,7 g · 5 kcal</strong></div>
+<div><span>N-R-G</span><strong>1 g · 0 kcal*</strong></div>
+<div><span>CR7 Drive</span><strong>6,75 g · 25 kcal</strong></div>
+<div><span>Liftoff</span><strong>5 g · 15 kcal</strong></div>
+<div><span>Total dos produtos em pó</span><strong>14,45 g</strong></div>
+<div><span>Calorias estimadas / 1.000 ml</span><strong>≈ 45 kcal</strong></div>
+<div><span>Carboidratos estimados / 1.000 ml</span><strong>≈ 12,5 g</strong></div>
+<div><span>Cafeína estimada / 1.000 ml</span><strong>≈ 210 mg</strong></div>
+<div><span>Açúcares / sódio do drink completo</span><strong>Não determinados</strong></div></div><p class="modal-caution">⚠ Valores aproximados de referência para uma única receita de 1.000 ml. Consideram 1,7 g de Herbal Concentrate, 1 g de N-R-G, 6,75 g de CR7 Drive e 1 sachê de Liftoff de 5 g; N-R-G é apresentado como 0 kcal por arredondamento. Os valores reais dependem da pesagem e de adicionais. Contém cafeína.</p><a id="modalAskLink" class="button button-lime" href="https://wa.me/5521992764362" target="_blank" rel="noopener noreferrer">Confirmar por WhatsApp <span>↗</span></a></div>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
   <script>
 /*
@@ -258,7 +286,7 @@ function openNutrition(id) {
   closeCart(false);
   lastFocused = document.activeElement;
   qs('#modalTitle').textContent = product.name;
-  const text = `Olá! Gostaria de confirmar os pesos dos dosadores e a quantidade exata de cafeína, calorias, açúcar e alergênicos por copo de 1.000 ml do ${product.name}.`;
+  const text = `Olá! Gostaria de confirmar as gramaturas reais dos dosadores e os valores nutricionais por copo de 1.000 ml do ${product.name} (referência estimada: 45 kcal e 12,5 g de carboidratos).`;
   qs('#modalAskLink').href = `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(text)}`;
   qs('#nutritionBackdrop').hidden = false;
   qs('#nutritionModal').classList.add('open');
